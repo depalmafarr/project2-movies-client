@@ -70,5 +70,26 @@
           <input type="submit" value="Show List">
         </fieldset>
       </form>
+
+      <p id="deleteMovieMessage"></p>
+      <form id="delete-movie" class="border">
+        <fieldset>
+          <legend>Delete Movie</legend>
+          <input type="text" name="deleteId" placeholder="Movie ID">
+          <input type="submit" value="Delete movie">
+        </fieldset>
+      </form>
+
+      <p id="changeMovieMessage"></p>
+      <form id="change-movie" class="border">
+        <fieldset>
+          <legend>Change Movie</legend>
+          <input type="text" name="changeId" placeholder="Movie ID">
+          <input type="text" name="movie[title]" placeholder="Title">
+          <input type="integer" name="movie[year]" placeholder="Release Year">
+          <input type="text" name="movie[rating]" placeholder="Rating ?/5">
+          <input type="submit" value="Edit">
+        </fieldset>
+      </form>
     </body>
 </html>

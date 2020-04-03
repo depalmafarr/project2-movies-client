@@ -68,11 +68,36 @@ const showMovies = function (data) {
   })
 }
 
+const deleteMovie = function () {
+  // console.log('In api.js')
+  return $.ajax({
+    url: config.apiUrl + '/movies/' + store.deleteId,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const changeMovie = function (data) {
+  // console.log('In api.js')
+  return $.ajax({
+    url: config.apiUrl + '/movies/' + store.changeId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
   addMovie,
-  showMovies
+  showMovies,
+  deleteMovie,
+  changeMovie
 }

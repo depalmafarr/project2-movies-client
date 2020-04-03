@@ -63,11 +63,41 @@ const onShowMovies = function (event) {
     .catch(ui.onShowMoviesFailure)
 }
 
+// create onShowMovies function
+const onDeleteMovie = function (event) {
+  event.preventDefault()
+  console.log('on delete movie')
+  const data = getFormFields(event.target)
+  // console.log(data)
+  // console.log(data.deleteId)
+  store.deleteId = data.deleteId
+  // console.log(store.deleteId)
+  api.deleteMovie(data)
+    .then(ui.onDeleteMovieSuccess)
+    .catch(ui.onDeleteMovieFailure)
+}
+
+// create onChangeMovie function
+const onChangeMovie = function (event) {
+  event.preventDefault()
+  console.log('on change movie')
+  const data = getFormFields(event.target)
+  // console.log(data)
+  console.log(data.changeId)
+  store.changeId = data.changeId
+  console.log(store.changeId)
+  api.changeMovie(data)
+    .then(ui.onChangeMovieSuccess)
+    .catch(ui.onChangeMovieFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
   onAddMovie,
-  onShowMovies
+  onShowMovies,
+  onDeleteMovie,
+  onChangeMovie
 }

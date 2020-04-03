@@ -110,6 +110,26 @@ const onShowMoviesFailure = function () {
   // console.log('onAddMovieFailure data is:)
 }
 
+const onDeleteMovieSuccess = function (data) {
+  $('#deleteMovieMessage').text('Movie deleted')
+  console.log('onDeleteMovieSuccess data is: ', data)
+}
+
+const onDeleteMovieFailure = function () {
+  $('#deleteMovieMessage').text('Did not delete movie')
+  // console.log('onDeleteMovieFailure data is:)
+}
+
+const onChangeMovieSuccess = function (data) {
+  $('#changeMovieMessage').text('Movie updated')
+  console.log('onChangeMovieSuccess data is: ', data)
+}
+
+const onChangeMovieFailure = function () {
+  $('#changeMovieMessage').text('Did not update movie')
+  // console.log('onChangeMovieFailure data is:)
+}
+
 module.exports = {
   onSignUpSucess,
   onSignUpFailure,
@@ -122,5 +142,9 @@ module.exports = {
   onAddMovieSuccess,
   onAddMovieFailure,
   onShowMoviesSuccess,
-  onShowMoviesFailure
+  onShowMoviesFailure,
+  onDeleteMovieSuccess,
+  onDeleteMovieFailure,
+  onChangeMovieSuccess,
+  onChangeMovieFailure
 }

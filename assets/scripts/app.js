@@ -14,4 +14,6 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#add-movie').on('submit', authEvents.onAddMovie)
   $('#show-movies').on('submit', authEvents.onShowMovies)
+  $('#delete-movie').on('submit', authEvents.onDeleteMovie)
+  $('#change-movie').on('submit', authEvents.onChangeMovie)
 })
