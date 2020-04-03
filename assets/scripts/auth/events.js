@@ -66,7 +66,7 @@ const onShowMovies = function (event) {
 // create onShowMovies function
 const onDeleteMovie = function (event) {
   event.preventDefault()
-  console.log('on delete movie')
+  // console.log('on delete movie')
   const data = getFormFields(event.target)
   // console.log(data)
   // console.log(data.deleteId)
@@ -91,6 +91,12 @@ const onChangeMovie = function (event) {
     .catch(ui.onChangeMovieFailure)
 }
 
+const addHandlers = () => {
+  $('#show-movies').on('submit', onShowMovies)
+  // $('#clearMoviesButton').on('click', onClearMovies)
+  // $('content').on('click', '.btn-danger', onDeleteMovie)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -99,5 +105,6 @@ module.exports = {
   onAddMovie,
   onShowMovies,
   onDeleteMovie,
-  onChangeMovie
+  onChangeMovie,
+  addHandlers
 }

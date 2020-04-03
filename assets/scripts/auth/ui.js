@@ -1,5 +1,6 @@
 'use strict'
 
+const showMoviesTemplate = require('../templates/movie-listing.handlebars')
 const store = require('../store')
 
 const onSignUpSucess = function (data) {
@@ -101,8 +102,11 @@ const onAddMovieFailure = function () {
 }
 
 const onShowMoviesSuccess = function (data) {
+  console.log(data)
+  const showMoviesHtml = showMoviesTemplate({ movies: data.movies })
+  $('.content').html(showMoviesHtml)
   $('#showMoviesMessage').text('Movies shown?')
-  console.log('onShowMoviesSuccess data is: ', data)
+  // console.log('onShowMoviesSuccess data is: ', data)
 }
 
 const onShowMoviesFailure = function () {

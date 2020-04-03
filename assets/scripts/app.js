@@ -16,4 +16,5 @@ $(() => {
   $('#show-movies').on('submit', authEvents.onShowMovies)
   $('#delete-movie').on('submit', authEvents.onDeleteMovie)
   $('#change-movie').on('submit', authEvents.onChangeMovie)
+  authEvents.addHandlers()
 })
