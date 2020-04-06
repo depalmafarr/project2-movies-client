@@ -63,17 +63,19 @@ const onShowMovies = function (event) {
     .catch(ui.onShowMoviesFailure)
 }
 
-// create onShowMovies function
+// create onDeleteMovie function
 const onDeleteMovie = function (event) {
   event.preventDefault()
-  // console.log('on delete movie')
-  const data = getFormFields(event.target)
+  console.log('on delete movie')
+  const data = $(event.target).closest('section').data('id')
   // console.log(data)
   // console.log(data.deleteId)
-  store.deleteId = data.deleteId
+  // store.deleteId = data.deleteId
   // console.log(store.deleteId)
   api.deleteMovie(data)
-    .then(ui.onDeleteMovieSuccess)
+    .then(function () {
+      onShowMovies(event)
+    })
     .catch(ui.onDeleteMovieFailure)
 }
 
@@ -94,7 +96,7 @@ const onChangeMovie = function (event) {
 const addHandlers = () => {
   $('#show-movies').on('submit', onShowMovies)
   // $('#clearMoviesButton').on('click', onClearMovies)
-  // $('content').on('click', '.btn-danger', onDeleteMovie)
+  $('.content').on('click', '.btn-danger', onDeleteMovie)
 }
 
 module.exports = {

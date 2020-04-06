@@ -68,10 +68,11 @@ const showMovies = function (data) {
   })
 }
 
-const deleteMovie = function () {
-  // console.log('In api.js')
+const deleteMovie = function (data) {
+  console.log('In api.js')
+  console.log(data)
   return $.ajax({
-    url: config.apiUrl + '/movies/' + store.deleteId,
+    url: config.apiUrl + '/movies/' + data,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token

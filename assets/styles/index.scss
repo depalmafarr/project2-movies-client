@@ -1,1 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
+
+.navbar {
+  background-color: #86c5da;
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
