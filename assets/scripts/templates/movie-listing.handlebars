@@ -24,8 +24,16 @@
     </h3>
 
     <hr>
+    <form id="updateButton" class="" data-id="{{movie.id}}">
+      <h3>Update movie</h3>
+      <fieldset>
+        <input type="text" name="movie[title]" value="{{movie.title}}" placeholder="Title">
+        <input type="integer" name="movie[year]" value="{{movie.year}}" placeholder="Release Year">
+        <input type="text" name="movie[rating]" value="{{movie.rating}}" placeholder="?/5">
+        <input type="submit" value="Edit entry">
+      </fieldset>
+    </form>
 
-    {{> updateMovie}}
     <button data-id="{{movie.id}}" class="btn btn-danger">Remove Movie!</button>
   </section>
 

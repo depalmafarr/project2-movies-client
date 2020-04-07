@@ -21,8 +21,8 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSucess = function (data) {
-  $('#signInMessage').text('Successful sign in')
-  $('#signInMessage').removeClass()
+  // $('#signInMessage').text('Successful sign in')
+  // $('#signInMessage').removeClass()
   $('#sign-in').addClass('hidden')
   $('#sign-up').addClass('hidden')
   $('#change-password').removeClass('hidden')

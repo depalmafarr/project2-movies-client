@@ -48,7 +48,16 @@ footer {
 
 .navbar {
   background-color: rgba(134,197,218,0.8);
-  display: flex;
+  padding: 5px 5px 0px 5px;
+  border: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+button {
+  margin-right: 15px;
+  margin-left: 5px;
+  margin-top: 8px;
 }
 
 .hidden {

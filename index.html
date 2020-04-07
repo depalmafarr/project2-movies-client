@@ -15,7 +15,7 @@
     <body>
 
       <h1>Movie Tracker</h1>
-      <nav class="navbar navbar-inverse">
+      <nav class="navbar navbar-inverse justify-content-start align-items-center">
         <div id="sign-up" class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sign up
@@ -24,7 +24,7 @@
           <form class="dropdown-menu p-4">
             <div class="form-group">
               <label for="dropdownFormUsername">Username</label>
-              <input type="text" class="form-control" id="dropdownFormUsername" name="credentials[email]" placeholder="example@email.com">
+              <input type="text" class="form-control" name="credentials[email]" placeholder="example@email.com">
             </div>
             <div class="form-group">
               <label for="dropdownFormPassword">Password</label>
@@ -85,7 +85,7 @@
         </form> -->
 
         <p id="signOutMessage"></p>
-        <form id="sign-out" class="border hidden">
+        <form id="sign-out" class="border hidden justify-content-end">
             <fieldset>
               <input type="submit" value="Sign out">
             </fieldset>

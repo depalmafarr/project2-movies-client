@@ -51,6 +51,9 @@ const onAddMovie = function (event) {
   const data = getFormFields(event.target)
   api.addMovie(data)
     .then(ui.onAddMovieSuccess)
+    .then(function () {
+      onShowMovies(event)
+    })
     .catch(ui.onAddMovieFailure)
 }
 
@@ -76,6 +79,7 @@ const onDeleteMovie = function (event) {
     .then(function () {
       onShowMovies(event)
     })
+    .then(ui.onDeleteMovieSuccess)
     .catch(ui.onDeleteMovieFailure)
 }
 
@@ -90,6 +94,9 @@ const onChangeMovie = function (event) {
   // console.log(store.changeId)
   api.changeMovie(data)
     .then(ui.onChangeMovieSuccess)
+    .then(function () {
+      onShowMovies(event)
+    })
     .catch(ui.onChangeMovieFailure)
 }
 
