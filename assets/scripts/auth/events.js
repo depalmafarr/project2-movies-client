@@ -47,7 +47,7 @@ const onSignOut = function (event) {
 // create onAddMovie function
 const onAddMovie = function (event) {
   event.preventDefault()
-  console.log('on add movie')
+  // console.log('on add movie')
   const data = getFormFields(event.target)
   api.addMovie(data)
     .then(ui.onAddMovieSuccess)
@@ -57,7 +57,7 @@ const onAddMovie = function (event) {
 // create onShowMovies function
 const onShowMovies = function (event) {
   event.preventDefault()
-  console.log('on show movies')
+  // console.log('on show movies')
   api.showMovies()
     .then(ui.onShowMoviesSuccess)
     .catch(ui.onShowMoviesFailure)
@@ -66,7 +66,7 @@ const onShowMovies = function (event) {
 // create onDeleteMovie function
 const onDeleteMovie = function (event) {
   event.preventDefault()
-  console.log('on delete movie')
+  // console.log('on delete movie')
   const data = $(event.target).closest('section').data('id')
   // console.log(data)
   // console.log(data.deleteId)
@@ -82,12 +82,12 @@ const onDeleteMovie = function (event) {
 // create onChangeMovie function
 const onChangeMovie = function (event) {
   event.preventDefault()
-  console.log('on change movie')
+  // console.log('on change movie')
   const data = getFormFields(event.target)
   // console.log(data)
-  console.log(data.changeId)
+  // console.log(data.changeId)
   store.changeId = data.changeId
-  console.log(store.changeId)
+  // console.log(store.changeId)
   api.changeMovie(data)
     .then(ui.onChangeMovieSuccess)
     .catch(ui.onChangeMovieFailure)

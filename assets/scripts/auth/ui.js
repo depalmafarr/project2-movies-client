@@ -8,7 +8,7 @@ const onSignUpSucess = function (data) {
   $('#message').removeClass()
   $('#signInMessage').text('')
   $('#sign-up').trigger('reset')
-  console.log('onSignUpSucess data is: ', data)
+  // console.log('onSignUpSucess data is: ', data)
 }
 
 const onSignUpFailure = function () {
@@ -35,7 +35,7 @@ const onSignInSucess = function (data) {
   $('#signUpMessage').text('')
   $('#message').text('')
   $('#sign-in').trigger('reset')
-  console.log('onSignInSucess data is: ', data)
+  // console.log('onSignInSucess data is: ', data)
   store.user = data.user
 }
 
@@ -53,7 +53,7 @@ const onChangePasswordSuccess = function (data) {
   $('#passwordChangeMessage').text('You changed your password!')
   $('#passwordChangeMessage').removeClass()
   $('#signInMessage').text('')
-  console.log('onChangePasswordSuccess data is: ', data)
+  // console.log('onChangePasswordSuccess data is: ', data)
 }
 
 const onChangePasswordFailure = function () {
@@ -82,8 +82,8 @@ const onSignOutSuccess = function (data) {
   // $('#currentTurn').text('')
   $('#passwordChangeMessage').text('')
   // $('#gameEndMessage').text('')
-  $('content').empty()
-  console.log('onSignOutSuccess data is: ', data)
+  $('.content').empty()
+  // console.log('onSignOutSuccess data is: ', data)
 }
 
 const onSignOutFailure = function () {
@@ -98,7 +98,7 @@ const onSignOutFailure = function () {
 
 const onAddMovieSuccess = function (data) {
   $('#movieMessage').text('Movie logged')
-  console.log('onAddMovieSuccess data is: ', data)
+  // console.log('onAddMovieSuccess data is: ', data)
 }
 
 const onAddMovieFailure = function () {
@@ -107,7 +107,7 @@ const onAddMovieFailure = function () {
 }
 
 const onShowMoviesSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   const showMoviesHtml = showMoviesTemplate({ movies: data.movies })
   $('.content').html(showMoviesHtml)
   $('#showMoviesMessage').text('Movies shown below')
@@ -121,7 +121,7 @@ const onShowMoviesFailure = function () {
 
 const onDeleteMovieSuccess = function (data) {
   $('#deleteMovieMessage').text('Movie deleted')
-  console.log('onDeleteMovieSuccess data is: ', data)
+  // console.log('onDeleteMovieSuccess data is: ', data)
 }
 
 const onDeleteMovieFailure = function () {
@@ -131,7 +131,7 @@ const onDeleteMovieFailure = function () {
 
 const onChangeMovieSuccess = function (data) {
   $('#changeMovieMessage').text('Movie updated')
-  console.log('onChangeMovieSuccess data is: ', data)
+  // console.log('onChangeMovieSuccess data is: ', data)
 }
 
 const onChangeMovieFailure = function () {

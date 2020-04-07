@@ -70,8 +70,8 @@ const showMovies = function (data) {
 }
 
 const deleteMovie = function (data) {
-  console.log('In api.js')
-  console.log(data)
+  // console.log('In api.js')
+  // console.log(data)
   return $.ajax({
     url: config.apiUrl + '/movies/' + data,
     method: 'DELETE',
@@ -82,7 +82,7 @@ const deleteMovie = function (data) {
 }
 
 const changeMovie = function () {
-  console.log('In api.js')
+  // console.log('In api.js')
   const id = $(event.target).closest('section').data('id')
   const data = getFormFields(event.target)
   // store.changeId
