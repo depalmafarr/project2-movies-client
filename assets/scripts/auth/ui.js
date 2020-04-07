@@ -110,7 +110,7 @@ const onShowMoviesSuccess = function (data) {
   console.log(data)
   const showMoviesHtml = showMoviesTemplate({ movies: data.movies })
   $('.content').html(showMoviesHtml)
-  $('#showMoviesMessage').text('Movies shown?')
+  $('#showMoviesMessage').text('Movies shown below')
   // console.log('onShowMoviesSuccess data is: ', data)
 }
 

@@ -1,10 +1,64 @@
 @import '~bootstrap/scss/bootstrap';
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+  height: 100%;
+  background-image: url(https://i.imgur.com/jnlGcFf.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 75px;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h6 {
+  font-weight: 700;
+}
+
+.topForm {
+  background-color: rgba(134,197,218,0.8);
+  margin: 15px;
+  padding: 15px;
+}
+
+footer {
+  background-color: #86c5da;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  position: fixed;
+  right: 0;
+  text-align: right;
+}
+
+.btn-danger {
+  margin-top: 10px;
+}
 
 .navbar {
-  background-color: #86c5da;
+  background-color: rgba(134,197,218,0.8);
   display: flex;
 }
 
 .hidden {
   display: none;
+}
+
+section {
+  background-color: rgba(211,211,211,0.8);
+  border: 3px solid black;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
 }

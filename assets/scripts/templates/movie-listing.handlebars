@@ -4,18 +4,26 @@
     <h3>
       {{movie.title}}
     </h3>
+
+    <hr>
+
     <h6>Release Year:</h6>
     <h3>
       {{movie.year}}
     </h3>
+
+    <hr>
+
     <h6>Rating:</h6>
-    <p>
+    <h3>
       {{#if movie.rating}}
         {{movie.rating}}
       {{else}}
         Not Rated
       {{/if}}
-    </p>
+    </h3>
+
+    <hr>
 
     {{> updateMovie}}
     <button data-id="{{movie.id}}" class="btn btn-danger">Remove Movie!</button>
