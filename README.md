@@ -4,7 +4,7 @@ Keep track of all the movies you have watched and what you thought of them!
 
 ## Getting Started
 
-For can be made and grunt served onto your server from the link to the project here (https://github.com/depalmafarr/PROJECTNAME)
+For can be made and grunt served onto your server from the link to the project here (https://github.com/depalmafarr/project2-movies-client)
 
 ### Future fixes/issues
 
@@ -54,7 +54,7 @@ ERD - https://drive.google.com/file/d/1JeGhDE_QwEcjonLyovJZ3Hom2KoRX4wH/view?usp
 
 ## Versioning
 
-We use [github] for versioning. For the versions available, see the (https://github.com/depalmafarr/PROJECTNAME).
+We use [github] for versioning. For the versions available, see the (https://github.com/depalmafarr/project2-movies-client).
 
 ## Authors
 
