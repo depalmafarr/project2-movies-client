@@ -82,6 +82,7 @@ const onSignOutSuccess = function (data) {
   // $('#currentTurn').text('')
   $('#passwordChangeMessage').text('')
   // $('#gameEndMessage').text('')
+  $('content').empty()
   console.log('onSignOutSuccess data is: ', data)
 }
 

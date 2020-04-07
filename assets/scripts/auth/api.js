@@ -2,6 +2,7 @@
 
 const config = require('../config')
 const store = require('../store')
+const getFormFields = require('../../../lib/get-form-fields.js')
 
 const signUp = function (data) {
   // console.log('In api.js')
@@ -80,15 +81,18 @@ const deleteMovie = function (data) {
   })
 }
 
-const changeMovie = function (data) {
-  // console.log('In api.js')
+const changeMovie = function () {
+  console.log('In api.js')
+  const id = $(event.target).closest('section').data('id')
+  const data = getFormFields(event.target)
+  // store.changeId
   return $.ajax({
-    url: config.apiUrl + '/movies/' + store.changeId,
+    url: config.apiUrl + '/movies/' + id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: data
+    data
   })
 }
 

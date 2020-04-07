@@ -97,6 +97,7 @@ const addHandlers = () => {
   $('#show-movies').on('submit', onShowMovies)
   // $('#clearMoviesButton').on('click', onClearMovies)
   $('.content').on('click', '.btn-danger', onDeleteMovie)
+  $('.content').on('submit', '#updateButton', onChangeMovie)
 }
 
 module.exports = {
