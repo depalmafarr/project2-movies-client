@@ -1,6 +1,16 @@
-# Movie Logger
+# Movie Logger Client
 
-Keep track of all the movies you have watched and what you thought of them!
+Sign in and use this app to keep track of all the movies you have watched and what you thought of them!
+
+# Movie Logger Client dev process
+
+Started by making sure the app is connected to the api so that users can create accounts and add movies in a user friendly way. When I hit issues I used research and other classmates to get through building the front end. There are many more styling choices that must be made in the future for this site. 
+
+
+## Deployed sites
+
+Front end (https://depalmafarr.github.io/project2-movies-client/).
+Back end (https://movie-logs-09.herokuapp.com/).
 
 ## Getting Started
 
@@ -51,6 +61,11 @@ ERD - https://drive.google.com/file/d/1JeGhDE_QwEcjonLyovJZ3Hom2KoRX4wH/view?usp
 * [GitHub](https://github.com/)
 * [herokuapp api](https://www.heroku.com/)
 * [bootstrap] - used for dropdowns
+
+## Backend
+
+For the back end of this project, see (https://github.com/depalmafarr/project2-movies-api).
+
 
 ## Versioning
 
