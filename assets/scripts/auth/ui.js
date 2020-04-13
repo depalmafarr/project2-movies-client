@@ -8,6 +8,7 @@ const onSignUpSucess = function (data) {
   $('#message').removeClass()
   $('#signInMessage').text('')
   $('#sign-up').trigger('reset')
+  $('#sign-up')[0].reset()
   // console.log('onSignUpSucess data is: ', data)
 }
 
@@ -23,9 +24,9 @@ const onSignUpFailure = function () {
 const onSignInSucess = function (data) {
   // $('#signInMessage').text('Successful sign in')
   // $('#signInMessage').removeClass()
-  $('#sign-in').addClass('hidden')
-  $('#sign-up').addClass('hidden')
-  $('#change-password').removeClass('hidden')
+  $('.sign-in').addClass('hidden')
+  $('.sign-up').addClass('hidden')
+  $('.change-password').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('#show-movies').removeClass('hidden')
   $('#add-movie').removeClass('hidden')
@@ -68,10 +69,10 @@ const onChangePasswordFailure = function () {
 const onSignOutSuccess = function (data) {
   $('#sign-out').trigger('reset')
   // $('#signInMessage').text('You signed out')
-  $('#signInMessage').removeClass()
-  $('#sign-in').removeClass('hidden')
-  $('#sign-up').removeClass('hidden')
-  $('#change-password').addClass('hidden')
+  $('.signInMessage').removeClass()
+  $('.sign-in').removeClass('hidden')
+  $('.sign-up').removeClass('hidden')
+  $('.change-password').addClass('hidden')
   $('#sign-out').addClass('hidden')
   $('#add-movie').addClass('hidden')
   $('#delete-movie').addClass('hidden')
@@ -98,6 +99,7 @@ const onSignOutFailure = function () {
 
 const onAddMovieSuccess = function (data) {
   $('#movieMessage').text('Movie logged')
+  $('#add-movie').trigger('reset')
   // console.log('onAddMovieSuccess data is: ', data)
 }
 
@@ -131,6 +133,7 @@ const onDeleteMovieFailure = function () {
 
 const onChangeMovieSuccess = function (data) {
   $('#changeMovieMessage').text('Movie updated')
+  $('#change-movie').trigger('reset')
   // console.log('onChangeMovieSuccess data is: ', data)
 }
 

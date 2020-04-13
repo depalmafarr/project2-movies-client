@@ -16,12 +16,12 @@
 
       <h1>Movie Tracker</h1>
       <nav class="navbar navbar-inverse justify-content-start align-items-center">
-        <div id="sign-up" class="dropdown">
+        <div class="dropdown sign-up">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sign up
           </button>
           <p id="message"></p>
-          <form class="dropdown-menu p-4">
+          <form id="sign-up" class="dropdown-menu p-4">
             <div class="form-group">
               <label for="dropdownFormUsername">Username</label>
               <input type="text" class="form-control" name="credentials[email]" placeholder="example@email.com">
@@ -38,12 +38,12 @@
           </form>
         </div>
 
-        <div id="sign-in" class="dropdown">
+        <div class="dropdown sign-in">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sign in
           </button>
           <p id="signInMessage"></p>
-          <form class="dropdown-menu p-4">
+          <form id="sign-in" class="dropdown-menu p-4">
             <div class="form-group">
               <label for="dropdownFormUsername">Username</label>
               <input type="text" class="form-control" id="dropdownFormUsername" name="credentials[email]" placeholder="username">
@@ -56,12 +56,12 @@
           </form>
         </div>
 
-        <div id="change-password" class="dropdown hidden">
+        <div class="dropdown change-password hidden">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Change Password
           </button>
           <p id="passwordChangeMessage"></p>
-          <form class="dropdown-menu p-4">
+          <form id="change-password" class="dropdown-menu p-4">
             <div class="form-group">
               <label for="dropdownFormPassword">Password</label>
               <input type="text" class="form-control" name="passwords[old]" placeholder="Old password">
