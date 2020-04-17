@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Movie Tracker</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <h1>Movie Tracker</h1>
+      <nav class="navbar navbar-inverse justify-content-start align-items-center">
+        <div class="dropdown sign-up">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sign up
+          </button>
+          <p id="message"></p>
+          <form id="sign-up" class="dropdown-menu p-4">
+            <div class="form-group">
+              <label for="dropdownFormUsername">Username</label>
+              <input type="text" class="form-control" name="credentials[email]" placeholder="example@email.com">
+            </div>
+            <div class="form-group">
+              <label for="dropdownFormPassword">Password</label>
+              <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="dropdownFormPassword">Confirm Password</label>
+              <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="btn btn-primary" value="Sign up">Sign up</button>
+          </form>
+        </div>
+
+        <div class="dropdown sign-in">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sign in
+          </button>
+          <p id="signInMessage"></p>
+          <form id="sign-in" class="dropdown-menu p-4">
+            <div class="form-group">
+              <label for="dropdownFormUsername">Username</label>
+              <input type="text" class="form-control" id="dropdownFormUsername" name="credentials[email]" placeholder="username">
+            </div>
+            <div class="form-group">
+              <label for="dropdownFormPassword">Password</label>
+              <input type="password" class="form-control" name="credentials[password]" placeholder="password">
+            </div>
+            <button type="submit" class="btn btn-primary" value="Sign in">Sign in</button>
+          </form>
+        </div>
+
+        <div class="dropdown change-password hidden">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Change Password
+          </button>
+          <p id="passwordChangeMessage"></p>
+          <form id="change-password" class="dropdown-menu p-4">
+            <div class="form-group">
+              <label for="dropdownFormPassword">Password</label>
+              <input type="text" class="form-control" name="passwords[old]" placeholder="Old password">
+            </div>
+            <div class="form-group">
+              <label for="dropdownFormPassword">Password</label>
+              <input type="password" class="form-control" name="passwords[new]" placeholder="New password">
+            </div>
+            <button type="submit" class="btn btn-primary" value="Change Password">Change Password</button>
+          </form>
+        </div>
+
+        <!-- <p id="passwordChangeMessage"></p>
+        <form id="change-password" class="border hidden">
+          <fieldset>
+            <legend>Change password</legend>
+            <input type="text" name="passwords[old]" placeholder="Old password">
+            <input type="password" name="passwords[new]" placeholder="New password">
+            <input type="submit" value="Change Password">
+          </fieldset>
+        </form> -->
+
+        <p id="signOutMessage"></p>
+        <form id="sign-out" class="border hidden justify-content-end">
+            <fieldset>
+              <input type="submit" value="Sign out">
+            </fieldset>
+          </form>
+      </nav>
+
+      <form id="add-movie" class="border hidden topForm">
+        <p id="movieMessage"></p>
+        <fieldset>
+          <legend>Add Movie</legend>
+          <input type="text" name="movie[title]" placeholder="Title">
+          <input type="integer" name="movie[year]" placeholder="Release Year">
+          <input type="text" name="movie[rating]" placeholder="Rating ?/5">
+          <input type="submit" value="Add">
+        </fieldset>
+      </form>
+
+      <form id="show-movies" class="border hidden topForm">
+        <p id="showMoviesMessage"></p>
+        <fieldset>
+          <legend>Show Movie</legend>
+          <input type="submit" value="Show List">
+        </fieldset>
+      </form>
+
+      <!-- <p id="deleteMovieMessage"></p>
+      <form id="delete-movie" class="border hidden">
+        <fieldset>
+          <legend>Delete Movie</legend>
+          <input type="text" name="deleteId" placeholder="Movie ID">
+          <input type="submit" value="Delete movie">
+        </fieldset>
+      </form> -->
+
+      <!-- <p id="changeMovieMessage"></p>
+      <form id="change-movie" class="border hidden">
+        <fieldset>
+          <legend>Change Movie</legend>
+          <input type="text" name="changeId" placeholder="Movie ID">
+          <input type="text" name="movie[title]" placeholder="Title">
+          <input type="integer" name="movie[year]" placeholder="Release Year">
+          <input type="text" name="movie[rating]" placeholder="Rating ?/5">
+          <input type="submit" value="Edit">
+        </fieldset>
+      </form> -->
+
+      <main>
+        <!-- add movies here -->
+        <div id="content" class="content"></div>
+      </main>
+
+      <footer>
+        App created by <a href="https://www.linkedin.com/in/brandon-depalmafarr/" target="_blank">Brandon DePalmaFarr</a>
+      </footer>
+
+    </body>
+</html>
