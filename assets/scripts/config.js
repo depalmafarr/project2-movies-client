@@ -1,5 +1,6 @@
 'use strict'
 
+// prodiction link should have no / at end of url
 let apiUrl
 const apiUrls = {
   production: 'https://movie-logs-09.herokuapp.com',
