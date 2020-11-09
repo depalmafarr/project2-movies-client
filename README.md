@@ -45,6 +45,8 @@ ERD - https://drive.google.com/file/d/1JeGhDE_QwEcjonLyovJZ3Hom2KoRX4wH/view?usp
   - As a returning user, I want to be able to log out so that other people can't see my stats.
 
   - As a returning user, I want to be able to sign back in so I can be back on my account to check my movies.
+  
+  - As a returning user, I want to be able to add my favorite movies to a favorites list.
 
   - As a user, I want to see the table showing all of my movies seen.
 
