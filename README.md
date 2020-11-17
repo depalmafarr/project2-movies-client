@@ -1,6 +1,6 @@
 # Movie Logger Client
 
-Sign in and use this app to keep track of all the movies you have watched and what you thought of them!
+Create an account, sign in, and use this app to keep track of all the movies you have watched and what you thought of them!
 
 # Movie Logger Client dev process
 
